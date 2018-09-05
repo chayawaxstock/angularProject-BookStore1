@@ -1,0 +1,41 @@
+
+.item-thumbs {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+    cursor: pointer;
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color:#fbb710; 
+    width: 300px;
+    height: 300px;
+}
+
+img{
+    width: 297px;
+    height: 216px;
+}
+
+.text{
+    display: block;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-title{
+    color:#fbb710
+}
+
+.moreDetails{
+    top: 34px;
+    bottom: 0px;
+    left: 12vw;
+    font-size: 16px;
+    position: relative;
+    color: #cc9900 !important;
+ }

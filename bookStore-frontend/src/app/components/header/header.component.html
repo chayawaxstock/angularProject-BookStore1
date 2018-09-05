@@ -1,0 +1,52 @@
+
+
+<div *ngIf="user; else UserNameDefault">
+  <p class="profile"> Hello {{user.userName}}!</p>
+  <img id="imgProfile" src="../../../assets/avatar5.png">
+</div>
+
+<ng-template #UserNameDefault>
+  <p class="profile">Hello guest!</p>
+  <img id="imgProfile" src="../../../assets/avatar2.png" />
+</ng-template>
+
+<div id="divLogo">
+  <div id="titleLogo">
+    <h1 id="logoTitle">Bookmark</h1>
+    <h3 id="logoText"> your favorite store</h3>
+  </div>
+  <!-- logo-book -->
+  <div class="stack">
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+    <div class="book"></div>
+  </div>
+</div>
+
+<!-- slide menu -->
+<div class="area"></div>
+<nav class="main-menu">
+  <ul>
+    <li>
+      <a href="http://justinfarrow.com">
+        <i class="fa fa-user fa-2x"></i>
+        <a class="nav-text" [routerLink]="['/bookStore/myAccount']">my account</a>
+      </a>
+    </li>
+    <li class="has-subnav">
+      <a href="#">
+        <i class="fa fa-book fa-2x"></i>
+        <a class="nav-text" [routerLink]="['/bookStore/products']">products</a>
+      </a>
+    </li>
+    <li class="has-subnav">
+      <a href="#">
+        <i class="fa fa-shopping-cart fa-2x">
+          <span class="badge badge-notify">{{countMyCard}}</span>
+        </i>
+        <a class="nav-text" [routerLink]="['/bookStore/myCart']">my cart</a>
+      </a>
+    </li>
+  </ul>
+</nav>

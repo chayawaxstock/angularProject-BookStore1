@@ -1,0 +1,314 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+main-content-wrapper .header-area {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: relative;
+    z-index: 1;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 320px;
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+    background-color: #fff;
+    padding: 60px 75px;
+}
+
+.fa-2x {
+font-size: 2em;
+}
+
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+font-family: 'Titillium Web', sans-serif;
+color: #fbb710 !important;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+.profile{
+    position: absolute;
+    right: 86px;
+    top: 20px;
+}
+
+#imgProfile {
+    position: absolute;
+    right: 32px;
+    width: 40px;
+    height: 40px;
+    top: 11px;
+    border-radius: 16em;
+}
+
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    left: -35px;
+ }
+
+ .badge-notify[_ngcontent-c1] {
+    background: #d39e00;
+    position: relative;
+    top: -6px;
+    left: -6px;
+    size: 4px;
+    width: 15px;
+    height: 15px;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 63%;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 2.25rem;
+}
+
+#spanName{
+    position: absolute;
+    top: 0px;
+    right: -37px;
+}
+
+.book {
+    -webkit-animation: stack .3s linear forwards;
+    animation: stack .3s linear forwards;
+    background-color: #E8D8A8;
+    border-color: #A0BD92;
+    border-width: 5px;
+    border-bottom-left-radius: 5px;
+    border-left-width: 7px;
+    border-top-left-radius: 5px;
+    border-right-color: white;
+    border-style: solid;
+    box-shadow: inset 5px 3px 10px -5px #444;
+    height: 14px;
+    position: relative;
+    opacity: 0;
+    width: 70px;
+}
+
+  .book:before, .book:after {
+    border-bottom: 3px solid #dec884;
+    border-top: 3px solid #dec884;
+    content: "";
+    height: 3px;
+    left: 4px;
+    top: 10px;
+    width: 95%;
+  }
+
+  .book:after {
+    bottom: 5px;
+    top: auto;
+  }
+  
+  .book:nth-of-type(1) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  
+  .book:nth-of-type(2) {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    border-color: #ffae3d;
+    border-left-color: white;
+    background-color: #ebddb4;
+    box-shadow: inset -5px 3px 10px -5px #444;
+    margin-left: 3em;
+  }
+  
+  .book:nth-of-type(3) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    background-color: #e2624f;
+    border-color: #e2624f;
+    box-shadow: none;
+    border-radius: 4px;
+    height: 7px;
+    margin-left: 3em;
+  }
+
+  .book:nth-of-type(3):before {
+    position: static;
+  }
+
+  .book:nth-of-type(3):after {
+    position: static;
+    border: none;
+  }
+  
+  .book:nth-of-type(4) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    border-color: #455971;
+    border-right-color: white;
+    height: 9px;
+    margin-left: -1em;
+  }
+  
+  @-webkit-keyframes stack {
+    100% {
+      margin-left: 1em;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes stack {
+    100% {
+      margin-left: 1em;
+      opacity: 1;
+    }
+  }
+
+  #titleLogo{
+    margin-left: 292px;
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive !important;
+  }
+
+  .stack{
+    margin-left: 196px;
+    margin-top: -11vh;
+  }
+
+  #divLogo{
+    position: relative;
+    right: 99px;
+  }
+  #logoText{
+    font-size: 12px;
+    position: relative;
+    top: -14px;
+  }
+
+  #logoTitle{
+    font-size: 19px;
+    position: relative;
+    top: 7px;
+  }

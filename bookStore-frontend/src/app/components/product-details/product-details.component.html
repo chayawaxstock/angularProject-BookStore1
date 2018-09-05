@@ -1,0 +1,39 @@
+
+<div class="col-md-6 col-xs-6 div ">
+        <img id="imgProfile" [src]="book.imageLinks['smallThumbnail']" />
+     </div>
+<div class="col-md-6 col-xs-6 div ">
+    <div class="single_product_desc">
+        <div class="product-meta-data">
+                <h2>{{book.title}}</h2>
+        </div>
+        <div class="short_overview my-5">
+            <ul>
+                <li>{{book.subtitle}}</li>
+                <div *ngIf="book.authors">
+                        <h4>authors</h4>
+                    <div *ngFor="let author of book.authors">
+                        <p>{{author}}</p>
+                    </div>
+                </div>
+                <li><h4>publisher</h4><p>{{book.publisher}}</p></li>
+                <li><h4>publishedDate</h4><p>{{book.publishedDate}}</p></li>
+                <li><h4>description</h4><p>{{book.description}}</p></li>
+                <li><h4>pageCount</h4><p>{{book.pageCount}}</p></li>
+                <li><h4>Qty</h4>
+                     <div class="quantity">
+                          <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1" (change)="updateCount($event.target.value)">
+                     </div>
+                </li>
+            </ul>
+        </div>
+
+            <button type="button" class="btn amado-btn mb-15" (click)="addToMyCart()" [disabled]="!user" >Add to cart</button>
+            <p class="back" (click)="backProductsPage()">
+                back to all Products
+                <span class="glyphicon glyphicon-share-alt back" ></span>
+            </p>
+      
+
+    </div>
+</div>

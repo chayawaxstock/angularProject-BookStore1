@@ -1,0 +1,35 @@
+
+.main-content-wrapper .header-area {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    position: relative;
+    z-index: 1;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 320px;
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+    background-color: #fff;
+    padding: 60px 75px;
+}
+
+#container {
+    height:100%;
+ }
+
+footer {
+    height: 6vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #efefef;
+    text-align: center;
+    background-color: #fbb710; 
+  }
+section{
+    margin-right: 3%;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

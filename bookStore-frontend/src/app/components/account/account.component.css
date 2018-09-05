@@ -1,0 +1,18 @@
+#logout{
+    left: 88.5%;
+    top: -15vh;
+    position: relative;
+}
+#login{
+    position: relative;
+    left: 95%;
+    top: -33px;
+}
+#register{
+    position: relative;
+    left: 95%;
+    top: -24px;
+}
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,89 @@
+.cardProduct{
+    float: left;
+    margin: 14px;
+    width: 30rem;
+}
+
+.cardProduct:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    height: 350px;
+}
+
+  @media (min-width: 0) {
+    .card-deck .card {
+      flex: 0 0 calc(100% - 30px);
+    }
+  }
+
+  @media (min-width: 576px) {
+    .card-deck .card {
+      flex: 0 0 calc(50% - 30px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .card-deck .card {
+      flex: 0 0 calc(33.3333333333% - 30px);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .card-deck .card {
+        flex: 0 0 calc(28% - 10px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .card-deck .card {
+      flex: 0 0 calc(20% - 30px);
+    }
+  }
+
+  .card{
+    height: 60vh;
+    position: relative;
+    top: -12vh;
+  }
+
+  #custom-search-input{
+    position: relative;
+    top: -1vh;
+    right: -42vw;
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+#booksHeader{
+    font-size: 40px;
+    font-family: 'Shrikhand', cursive;
+    left: 6vw;
+    position: relative;
+    top: -12vh;
+}

@@ -1,0 +1,24 @@
+
+<h2>Login</h2>
+
+<form  class="col-md-offset-3" [formGroup]="formGroup" (ngSubmit)="submitLogin()">
+    <div class="imgcontainer">
+        <img src="../../../assets/avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div >
+        <div  class="form-group has-error has-feedback nm" *ngFor="let x of obj.keys(formGroup.controls)" id="{{x}}">
+            <label >
+                <b>{{x}}</b>
+            </label>
+            <input type="text" formControlName="{{x}}" placeholder="Enter {{x}}" name="uname">
+            <div class="help-block" *ngIf="formGroup.controls[x].errors&&formGroup.controls[x].touched">
+                <p *ngFor="let err of obj.values(formGroup.controls[x].errors)">{{err}}</p>
+            </div>
+        </div>
+       
+       <button type="submit" class="btn login-btn mb-15" [disabled]="formGroup.invalid" >Login</button>
+       
+    </div>
+
+</form>

@@ -1,0 +1,13 @@
+<h2 id="myHeader"> My cart</h2>
+
+<div >
+ <button *ngIf="myCartBook.length!=0" type="submit" class="btn amado-btn mb-15 deleteAll" (click)="removeAllMyCart()" >remove all</button>
+ <div *ngIf="myCartBook.length==0">your cart empty</div>
+ <div class="container">
+    <div class="card-deck" >
+        <div *ngFor="let book of myCartBook"  class="card my-3" >
+            <app-cart-product [book]="book"></app-cart-product>
+        </div>
+       </div>
+ </div>
+</div>

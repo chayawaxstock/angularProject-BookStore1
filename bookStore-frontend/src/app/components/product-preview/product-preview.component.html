@@ -1,0 +1,9 @@
+<img [src]='book.imageLinks["smallThumbnail"]' class="card-img-top">
+
+<div class="card-body">
+    <h3 class="card-title text">{{book.title}}</h3>
+    <p class="card-text text">{{book.subtitle}}</p>
+    <a (click)="bookDetails()" class="moreDetails" >more details<span class="glyphicon glyphicon-tasks" ></span></a>
+</div>
+
+
