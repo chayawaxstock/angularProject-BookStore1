@@ -3,6 +3,7 @@ import { FormGroup, FormControl, ValidatorFn } from '@angular/forms';
 import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/user.service';
 import { Router } from '@angular/router';
+import sha256 from 'async-sha256';
 
 @Component({
   selector: 'app-register',
@@ -29,6 +30,7 @@ export class RegisterComponent {
 
   submitRegister() {
     let person: User = this.formGroup.value;
+    sha256(person.userPassword).then(p=>person.userPassword=p);
     this.userService.registerUser(person);
     this.router.navigate(['/bookStore/home']);
   }
