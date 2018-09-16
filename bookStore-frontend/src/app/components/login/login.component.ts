@@ -4,6 +4,7 @@ import { BookStoreService } from '../../shared/services/book-store.service'
 import { User } from '../../shared/models/user.model';
 import { UserService } from '../../shared/services/user.service';
 import { Router } from '@angular/router';
+import sha256 from 'async-sha256';
 
 @Component({
   selector: 'app-login',
@@ -31,6 +32,8 @@ export class LoginComponent {
     }
     else {
       this.user = this.formGroup.value;
+
+     sha256(this.user.userPassword).then(p=>this.user.userPassword=p);
       this.userService.login(this.user);
       this.router.navigate(['/bookStore/home']);
     }
