@@ -33,9 +33,11 @@ export class LoginComponent {
     else {
       this.user = this.formGroup.value;
 
-     sha256(this.user.userPassword).then(p=>this.user.userPassword=p);
-      this.userService.login(this.user);
+     sha256(this.user.password).then(p=>{this.user.password=p
+    this.userService.login(this.user);
       this.router.navigate(['/bookStore/home']);
+    });
+      
     }
   }
 

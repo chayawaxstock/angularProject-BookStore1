@@ -10,33 +10,46 @@ import { Router } from '@angular/router';
 export class UserService {
   
   user: User;
-  basicURL: string = "http://localhost:3000";
+  basicURL: string = "http://localhost:8000/api";
   subject = new Subject();
   
   constructor(public httpClient: HttpClient,public router:Router) {
     this.user = null;
   }
 
-  login(user): void {
-    console.log(user);
-    this.httpClient.post(this.basicURL + "/login", user).subscribe(
-      (res) => {
-        localStorage.setItem("user", JSON.stringify(user));
-        localStorage.setItem("token", JSON.stringify(res));
+
+
+  login(user:User): void {
+    this.httpClient.get(this.basicURL+"/client", {
+      headers: {
+        "xx-auth": user.password+user.userName
+      },
+      observe: 'response',
+      responseType: 'json'
+    }).subscribe(res => {
+      if (!res.headers.get("xx-auth")) {
+       alert('Invalid username or password');
+      }
+      localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("token", JSON.stringify(res.headers.get("xx-auth")));
         this.subject.next(this.checkUserLogin());
         this.user = user;
-       }, err => {
-        console.log(err);
-        this.router.navigate(['/bookStore/myAccount/register']);
-      }
-    )
+      
+    }, () => {    this.router.navigate(['/bookStore/myAccount/register']); })
+
   }
 
   registerUser(newUser: User): void {
-    let url: string = this.basicURL + "/register";
-    this.httpClient.post(url, newUser).subscribe(res => {
+    let url: string = this.basicURL + "/client";
+    this.httpClient.post(url, newUser,{
+      observe: 'response',
+      responseType: 'json'
+    }).subscribe(res => {
+      if (!res.headers.get("xx-auth")) {
+        alert('Invalid user details');
+      }
       localStorage.setItem('user', JSON.stringify(newUser));
-      localStorage.setItem("token", JSON.stringify(res));
+      localStorage.setItem("token", JSON.stringify( res.headers.get("xx-auth")));
       this.subject.next(this.checkUserLogin());
     },
       err => {

@@ -31,9 +31,10 @@ export class RegisterComponent {
   submitRegister() {
   
     let person: User = this.formGroup.value;
-    sha256(person.userPassword).then(p=>person.userPassword=p);
-    this.userService.registerUser(person);
-    this.router.navigate(['/bookStore/home']);
+    sha256(person.password).then(p=>{person.password=p; 
+      this.userService.registerUser(person);
+    this.router.navigate(['/bookStore/home']);});
+   
   }
 
   createValidatorArr(cntName: string, min: number, max: number, pattern?: RegExp): Array<ValidatorFn> {
