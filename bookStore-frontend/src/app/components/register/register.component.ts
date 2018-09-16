@@ -29,6 +29,7 @@ export class RegisterComponent {
   }
 
   submitRegister() {
+  
     let person: User = this.formGroup.value;
     sha256(person.userPassword).then(p=>person.userPassword=p);
     this.userService.registerUser(person);

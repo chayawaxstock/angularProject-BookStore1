@@ -21,7 +21,6 @@ export class UserService {
     console.log(user);
     this.httpClient.post(this.basicURL + "/login", user).subscribe(
       (res) => {
-         
         localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("token", JSON.stringify(res));
         this.subject.next(this.checkUserLogin());
