@@ -21,7 +21,7 @@ export class LoginComponent {
               private router: Router) {
     let formGroupConfig = {
       userName: new FormControl("", this.createValidatorArr("name", 3, 15, /^[A-Za-z]+$/)),
-      userPassword: new FormControl("", this.createValidatorArr("password", 5, 10))
+      password: new FormControl("", this.createValidatorArr("password", 5, 10))
     };
     this.formGroup = new FormGroup(formGroupConfig);
   }

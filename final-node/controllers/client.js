@@ -4,10 +4,11 @@ const { Client } = require('./../models/client');
 let init = (app) => {
     // Add client - REGISTER: 
     app.post("/api/client", (request, response) => {
-        console.log("kkkkk");
+        console.log(request.body);
         let client = new Client(request.body);
         client.save()
             .then((newDoc) => {
+               console.log("bhcvv b");
                 let token=jwt.sign({id: newDoc._id}, 'my secret')
                 response.header('xx-auth', token);
                 response.status(201).send(newDoc);

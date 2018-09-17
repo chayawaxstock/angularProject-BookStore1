@@ -21,7 +21,7 @@ export class RegisterComponent {
     let formGroupConfig = {
       firstName: new FormControl("", this.createValidatorArr("firstName", 2, 15, /^[A-Za-z]+$/)),
       lastName: new FormControl("", this.createValidatorArr("lastName", 2, 15, /^[A-Za-z]+$/)),
-      userPassword: new FormControl("", this.createValidatorArr("password", 5, 10)),
+      password: new FormControl("", this.createValidatorArr("password", 5, 10)),
       userName: new FormControl("", this.createValidatorArr("userName", 3, 15, /^[A-Za-z]+$/)),
     };
 

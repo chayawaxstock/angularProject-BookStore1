@@ -30,10 +30,12 @@ export class UserService {
       if (!res.headers.get("xx-auth")) {
        alert('Invalid username or password');
       }
-      localStorage.setItem("user", JSON.stringify(user));
+    else{
+       localStorage.setItem("user", JSON.stringify(user));
         localStorage.setItem("token", JSON.stringify(res.headers.get("xx-auth")));
         this.subject.next(this.checkUserLogin());
         this.user = user;
+      } 
       
     }, () => {    this.router.navigate(['/bookStore/myAccount/register']); })
 
@@ -44,10 +46,7 @@ export class UserService {
     this.httpClient.post(url, newUser,{
       observe: 'response',
       responseType: 'json'
-    }).subscribe(res => {
-      if (!res.headers.get("xx-auth")) {
-        alert('Invalid user details');
-      }
+    }).subscribe(res => { 
       localStorage.setItem('user', JSON.stringify(newUser));
       localStorage.setItem("token", JSON.stringify( res.headers.get("xx-auth")));
       this.subject.next(this.checkUserLogin());
