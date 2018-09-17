@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class UserService {
   
   user: User;
-  basicURL: string = "http://localhost:8000/api";
+  basicURL: string = "/api";
   subject = new Subject();
   
   constructor(public httpClient: HttpClient,public router:Router) {

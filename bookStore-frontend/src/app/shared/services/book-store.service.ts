@@ -13,7 +13,7 @@ export class BookStoreService {
   subjectCart=new Subject();
   book:VolumeInfo;
   //basicURL:string="https://book-store-angular-28249.herokuapp.com/api";
-   basicURL:string="http://localhost:8000/api";
+   basicURL:string="/api";
   bookList:Book[];
   search:string;
   //check if use search and go to product detail and want to go back with search

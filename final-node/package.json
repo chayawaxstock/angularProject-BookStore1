@@ -1,7 +1,7 @@
 {
   "name": "uri",
   "version": "1.0.0",
-  "description": "",
+  "description": "```bash\r curl -v -X POST -H \"Content-type: application/json\" -d \"{\\\"firstName\\\":\\\"test\\\", \\\"lastName\\\":\\\"test2\\\", \\\"userName\\\":\\\"test3\\\", \\\"password\\\":\\\"a4e624d686e03ed2767c0abd85c14426b0b1157d2ce81d27bb4fe4f6f01d688a\\\", \\\"country\\\":\\\"Israel\\\" }\"  http://localhost:8000/api/client\r ```\r ##### output\r ```bash\r *   Trying ::1...\r * TCP_NODELAY set\r * Connected to localhost (::1) port 8000 (#0)\r > POST /api/client HTTP/1.1\r > Host: localhost:8000\r > User-Agent: curl/7.55.1\r > Accept: */*\r > Content-type: application/json\r > Content-Length: 160\r >\r * upload completely sent off: 160 out of 160 bytes\r < HTTP/1.1 201 Created\r < X-Powered-By: Express\r < xx-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViOWUyMWJhZTE5MTc1MWM1YzBhNjg4YiIsImlhdCI6MTUzNzA4OTk3OH0.kR6KYUT0_YFr716BxEdps9ylM-bhNy8Ra2722RRp0rE\r < Content-Type: application/json; charset=utf-8\r < Content-Length: 212\r < ETag: W/\"d4-/fVcS9yucw2JZf6Bu76C4Nv7mjU\"\r < Date: Sun, 16 Sep 2018 09:26:18 GMT\r < Connection: keep-alive\r <\r {\"bookOrders\":[],\"_id\":\"5b9e21bae191751c5c0a688b\",\"firstName\":\"test\",\"lastName\":\"test2\",\"userName\":\"test3\",\"password\":\"a4e624d686e03ed2767c0abd85c14426b0b1157d2ce81d27bb4fe4f6f01d688a\",\"country\":\"Israel\",\"__v\":0}\r ```",
   "main": "app.js",
   "scripts": {
     "start": "node controllers/index.js",
@@ -16,5 +16,7 @@
     "express": "^4.16.3",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.10"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
